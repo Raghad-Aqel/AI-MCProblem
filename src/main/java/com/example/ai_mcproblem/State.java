@@ -14,7 +14,6 @@ public class State
         this.boat = boat;
     }
 
-    //عشان يحسب قيمةال missionaries و cannibals , boat لما نستخدم hashmap
     public int hashCode() {
         return Objects.hash(missionaries, cannibals, boat);
     }

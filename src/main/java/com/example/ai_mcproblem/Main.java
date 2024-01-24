@@ -54,7 +54,7 @@ public class Main extends Application {
         MCBorderPane.setPadding(new Insets(20));
         MCBorderPane.setAlignment(title, Pos.CENTER);
         MCBorderPane.setMargin(title, new Insets(40, 0, 0, 0));
-        Scene scene = new Scene(MCBorderPane, 1170, 720);
+        Scene scene = new Scene(MCBorderPane, 1220, 720);
 
         BorderPane BFSBorderPane = new BorderPane();
         BFSBorderPane.setPadding(new Insets(10));
@@ -76,7 +76,7 @@ public class Main extends Application {
         BFSBorderPane.setCenter(BFSTextArea);
         BorderPane.setAlignment(BFSBackButton, Pos.BOTTOM_CENTER);
         BFSBorderPane.setBottom(BFSBackButton);
-        Scene BFSScene = new Scene(BFSBorderPane, 1170, 720);
+        Scene BFSScene = new Scene(BFSBorderPane, 1220, 720);
 
         BFSBackButton.setOnAction(e -> {
             stage.setScene(scene);
@@ -104,7 +104,7 @@ public class Main extends Application {
         DFSBorderPane.setCenter(DFSTextArea);
         BorderPane.setAlignment(DFSBackButton, Pos.BOTTOM_CENTER);
         DFSBorderPane.setBottom(DFSBackButton);
-        Scene DFSScene = new Scene(DFSBorderPane, 1170, 720);
+        Scene DFSScene = new Scene(DFSBorderPane, 1220, 720);
 
         DFSBackButton.setOnAction(e -> {
             stage.setScene(scene);

@@ -6,6 +6,8 @@ public class Solver {
 
     //BFS Method
     public  String BFS(State start, State goal) {
+        long startTime = System.currentTimeMillis();
+
         Queue<State> queue = new LinkedList<>(); //This creates a queue to store the states that need to be explored.
         Set<State> visited = new HashSet<>(); //states that have already been visited (to avoid revisiting the same state)
         Map<State, State> parentMap = new HashMap<>();
@@ -18,7 +20,10 @@ public class Solver {
 
             if (current.equals(goal)) {
                 String str = printSolution(parentMap, current);
-                return str;
+                long endTime = System.currentTimeMillis();
+                long executionTime = endTime - startTime;
+                System.out.println("Execution Time: " + executionTime + " milliseconds");
+                return str +"Execution Time: " + executionTime + " milliseconds";
             }
 
             for (State next : getValidMoves(current)) {
@@ -29,11 +34,15 @@ public class Solver {
                 }
             }
         }
-        return  "";
+        long endTime = System.currentTimeMillis();
+        long executionTime = endTime - startTime;
+        System.out.println("Execution Time: " + executionTime + " milliseconds");
+        return  "The Solution not found\n"+"Execution Time: " + executionTime + " milliseconds";
     }
 
     //DFS Method
     public  String DFS(State start, State goal) {
+        long startTime = System.currentTimeMillis();
         Stack<State> stack = new Stack<>();
         Set<State> visited = new HashSet<>();
         Map<State, State> parentMap = new HashMap<>();
@@ -46,7 +55,10 @@ public class Solver {
 
             if (current.equals(goal)) {
                 String str = printSolution(parentMap, current);
-                return str;
+                long endTime = System.currentTimeMillis();
+                long executionTime = endTime - startTime;
+                System.out.println("Execution Time: " + executionTime + " milliseconds");
+                return str +"Execution Time: " + executionTime + " milliseconds";
             }
 
             for (State next : getValidMoves(current)) {
@@ -57,8 +69,10 @@ public class Solver {
                 }
             }
         }
-
-        return  "";
+        long endTime = System.currentTimeMillis();
+        long executionTime = endTime - startTime;
+        System.out.println("Execution Time: " + executionTime + " milliseconds");
+        return  "The Solution not found\n"+"Execution Time: " + executionTime + " milliseconds";
 
     }
 
@@ -144,4 +158,6 @@ public class Solver {
         }
         return str;
     }
+
+
 }
