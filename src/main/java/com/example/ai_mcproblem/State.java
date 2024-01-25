@@ -14,10 +14,6 @@ public class State
         this.boat = boat;
     }
 
-    public int hashCode() {
-        return Objects.hash(missionaries, cannibals, boat);
-    }
-
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
@@ -25,5 +21,9 @@ public class State
         return missionaries == state.missionaries &&
                 cannibals == state.cannibals &&
                 boat == state.boat;
+    }
+
+    public int hashCode() {
+        return Objects.hash(missionaries, cannibals, boat);  //generate a hash code of the object
     }
 }
